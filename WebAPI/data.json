@@ -5,5 +5,15 @@
       "UserName": "Anushri"
     }
   ],
-  "Posts": []
+  "Posts": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 1,
+        "UserName": "Anushri"
+      },
+      "Title": "Testing",
+      "Body": "Test1"
+    }
+  ]
 }
