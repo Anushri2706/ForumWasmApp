@@ -8,5 +8,6 @@ public interface IPostLogic
     Task<Post> CreateAsync(PostCreationDto dto);
     Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchParameters);
     Task<PostBasicDto> GetByIdAsync(int id);
-
+    Task UpdateAsync(PostUpdateDto todo);
+    Task DeleteAsync(int id);
 }
