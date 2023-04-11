@@ -46,6 +46,20 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -83,12 +97,18 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Domain >= 1.0.0",
-      "Microsoft.AspNetCore.OpenApi >= 7.0.4"
+      "Microsoft.AspNetCore.OpenApi >= 7.0.4",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -118,6 +138,9 @@
           "projectReferences": {
             "/Users/tweety/RiderProjects/ForumWasmApp/Domain/Domain.csproj": {
               "projectPath": "/Users/tweety/RiderProjects/ForumWasmApp/Domain/Domain.csproj"
+            },
+            "/Users/tweety/RiderProjects/ForumWasmApp/Shared/Shared.csproj": {
+              "projectPath": "/Users/tweety/RiderProjects/ForumWasmApp/Shared/Shared.csproj"
             }
           }
         }

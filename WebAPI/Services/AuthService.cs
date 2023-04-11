@@ -1,50 +1,13 @@
 using System.ComponentModel.DataAnnotations;
+using Application.DaoInterfaces;
 using Domain.Model;
 
 namespace WebAPI.Services;
 
 public class AuthService : IAuthService
 {
-    private readonly IList<User> users = new List<User>
-    {
-        new User
-        {
-          
-          UserName = "Anushri Gupta",
-          Id = 3,
-          password = "CoolKids"
-        },
-        new User
-        {
-            UserName = "Hello Hi",
-            Id = 4,
-            password = "CoolKids12"
-        }
-    };
-
-    public Task<User> ValidateUser(string username, string password)
-    {
-        User? existingUser = users.FirstOrDefault(u => 
-            u.UserName.Equals(username, StringComparison.OrdinalIgnoreCase));
-        
-        if (existingUser == null)
-        {
-            throw new Exception("User not found");
-        }
-
-        if (!existingUser.password.Equals(password))
-        {
-            throw new Exception("Password mismatch");
-        }
-
-        return Task.FromResult(existingUser);
-    }
-
-    public Task<User> GetUser(string username, string password)
-    {
-        throw new NotImplementedException();
-    }
-
+    private readonly IUserDao userDao;
+    
     public Task RegisterUser(User user)
     {
 
@@ -61,7 +24,7 @@ public class AuthService : IAuthService
         
         // save to persistence instead of list
         
-        users.Add(user);
+        userDao.CreateAsync(user);
         
         return Task.CompletedTask;
     }

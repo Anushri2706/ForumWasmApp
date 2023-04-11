@@ -13,3 +13,5 @@
 /Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/refint/HttpsClients.dll
 /Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.pdb
 /Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/ref/HttpsClients.dll
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/Shared.dll
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/Shared.pdb

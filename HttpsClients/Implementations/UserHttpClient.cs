@@ -17,10 +17,10 @@ public class UserHttpClient : IUserService
     }
 
     
-    public async Task<User> CreateAsync(UserCreationDto dto)
+    public async Task<User> CreateAsync(User users)
     {
         //make a POST request to /users sending the dto which is serialized to JSON and wrapped in stringcontent obj
-        HttpResponseMessage response = await client.PostAsJsonAsync("/User", dto);
+        HttpResponseMessage response = await client.PostAsJsonAsync("/User", users);
         string result = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"Response status code: {(int)response.StatusCode} {response.ReasonPhrase}");
         Console.WriteLine($"Response body: {result}");

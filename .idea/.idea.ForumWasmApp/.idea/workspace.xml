@@ -20,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Downloads/DNP_Assignment-master/Shared/Auth/AuthService.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,7 +50,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="HTTP Request.Test | #2">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI: https">
     <configuration name="Test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/Test.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>

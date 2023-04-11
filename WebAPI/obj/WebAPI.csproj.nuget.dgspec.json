@@ -28,6 +28,9 @@
             "projectReferences": {
               "/Users/tweety/RiderProjects/ForumWasmApp/Domain/Domain.csproj": {
                 "projectPath": "/Users/tweety/RiderProjects/ForumWasmApp/Domain/Domain.csproj"
+              },
+              "/Users/tweety/RiderProjects/ForumWasmApp/Shared/Shared.csproj": {
+                "projectPath": "/Users/tweety/RiderProjects/ForumWasmApp/Shared/Shared.csproj"
               }
             }
           }

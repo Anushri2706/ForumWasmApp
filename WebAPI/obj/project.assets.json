@@ -256,7 +256,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Domain": "1.0.0",
-          "Microsoft.AspNetCore.OpenApi": "7.0.4"
+          "Microsoft.AspNetCore.OpenApi": "7.0.4",
+          "Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
