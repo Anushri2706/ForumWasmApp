@@ -4,6 +4,7 @@ using Domain.Model;
 using Microsoft.AspNetCore.Mvc;
 using Application.LogicInterfaces;
 using Domain.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace WebAPI.Controllers;
@@ -35,6 +36,7 @@ public class UserController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
     [HttpGet]
     public async Task<ActionResult<IEnumerable<User>>> GetAsyncc([FromQuery] string? username)
     {
@@ -49,5 +51,11 @@ public class UserController : ControllerBase
             Console.WriteLine(e);
             return StatusCode(500, e.Message);
         }
+    }
+    
+    [HttpGet("allowanon"), AllowAnonymous]
+    public ActionResult GetAsAnon()
+    {
+        return Ok("This was accepted as anonymous");
     }
 }

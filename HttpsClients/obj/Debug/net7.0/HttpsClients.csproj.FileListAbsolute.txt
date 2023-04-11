@@ -1,0 +1,15 @@
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/HttpsClients.deps.json
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/HttpsClients.dll
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/HttpsClients.pdb
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/Domain.dll
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/bin/Debug/net7.0/Domain.pdb
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.csproj.AssemblyReference.cache
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.AssemblyInfoInputs.cache
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.AssemblyInfo.cs
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.csproj.CoreCompileInputs.cache
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.csproj.CopyComplete
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.dll
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/refint/HttpsClients.dll
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/HttpsClients.pdb
+/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/obj/Debug/net7.0/ref/HttpsClients.dll

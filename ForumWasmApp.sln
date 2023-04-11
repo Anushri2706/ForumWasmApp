@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor", "Blazor\Blazor.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpsClients", "HttpsClients\HttpsClients.csproj", "{F89619CE-1E79-4012-9350-EF419D42A621}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{B3435855-CA70-4809-B91E-4FEDFE476E99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{F89619CE-1E79-4012-9350-EF419D42A621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89619CE-1E79-4012-9350-EF419D42A621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89619CE-1E79-4012-9350-EF419D42A621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3435855-CA70-4809-B91E-4FEDFE476E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3435855-CA70-4809-B91E-4FEDFE476E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3435855-CA70-4809-B91E-4FEDFE476E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3435855-CA70-4809-B91E-4FEDFE476E99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

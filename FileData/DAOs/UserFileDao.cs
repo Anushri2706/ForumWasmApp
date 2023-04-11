@@ -29,8 +29,9 @@ public class UserFileDao : IUserDao
 
         return Task.FromResult(user);
     }
+    
 
-    public Task<User?> GetByUsername(string userName)
+    public Task<User?> GetByUsername(string userName, string password)
     {
         User? existing = context.Users.FirstOrDefault(u =>
             u.UserName.Equals(userName, StringComparison.OrdinalIgnoreCase)

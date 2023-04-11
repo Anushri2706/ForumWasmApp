@@ -1,12 +1,14 @@
 using Application.LogicInterfaces;
 using Domain.DTOs;
 using Domain.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class PostController : ControllerBase
 {
     private readonly IPostLogic postLogic;
@@ -30,6 +32,7 @@ public class PostController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Post>>> GetAsync([FromQuery] string? userName, [FromQuery] int? userId,
         [FromQuery] string? title)
@@ -61,6 +64,7 @@ public class PostController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
     [HttpPatch]
     public async Task<ActionResult> UpdateAsync([FromBody] PostUpdateDto dto)
     {
@@ -75,6 +79,7 @@ public class PostController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
     [HttpDelete("{id:int}")]
     public async Task<ActionResult> DeleteAsync([FromRoute] int id)
     {
@@ -88,6 +93,12 @@ public class PostController : ControllerBase
             Console.WriteLine(e);
             return StatusCode(500, e.Message);
         }
+    }
+    
+    [HttpGet("authorized")]
+    public ActionResult GetAsAuthorized()
+    {
+        return Ok("This was accepted as authorized");
     }
 
 }

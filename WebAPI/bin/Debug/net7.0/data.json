@@ -2,7 +2,33 @@
   "Users": [
     {
       "Id": 1,
-      "UserName": "Anushri"
+      "UserName": "Anushri",
+      "password": null
+    },
+    {
+      "Id": 2,
+      "UserName": "ohi",
+      "password": null
+    },
+    {
+      "Id": 3,
+      "UserName": "Anushr",
+      "password": null
+    },
+    {
+      "Id": 4,
+      "UserName": "Anusr",
+      "password": null
+    },
+    {
+      "Id": 5,
+      "UserName": "Ola",
+      "password": null
+    },
+    {
+      "Id": 6,
+      "UserName": "Test1",
+      "password": null
     }
   ],
   "Posts": [
@@ -10,7 +36,8 @@
       "Id": 1,
       "Owner": {
         "Id": 1,
-        "UserName": "Anushri"
+        "UserName": "Anushri",
+        "password": null
       },
       "Title": "Testing",
       "Body": "Test1"

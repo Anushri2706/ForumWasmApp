@@ -1,0 +1,122 @@
+@* @page "/ViewPost" *@
+@* @using Domain *@
+@* @using Domain.Model *@
+@* @using HttpsClients.ClientInterfaces *@
+@* @inject IPostService postService *@
+@* @inject NavigationManager navMgr *@
+@* <h3>Posts</h3> *@
+@* *@
+@* <div> *@
+@*     <button @onclick="LoadPosts">Load</button> *@
+@* </div> *@
+@* @if (posts == null) *@
+@* { *@
+@* } *@
+@* else if (!post.Any()) *@
+@* { *@
+@*     <p>No Posts to display</p> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <table class="table"> *@
+@*         <thead> *@
+@*         <tr> *@
+@*             <th>Todo ID</th> *@
+@*             <th>Owner ID</th> *@
+@*             <th>Title</th> *@
+@*             <th>Completed?</th> *@
+@*             <th>Edit</th> *@
+@*             <th>Delete?</th> *@
+@*         </tr> *@
+@*         </thead> *@
+@*         <tbody> *@
+@*         @foreach (var item in todos) *@
+@*         { *@
+@*             <tr> *@
+@*                 <td>@item.Id</td> *@
+@*                 <td>@item.Owner.UserName</td> *@
+@*                 <td>@item.Title</td> *@
+@*                 <td> *@
+@*                     <FancyCheckBox IsCompleted="@item.isCompleted" OnChange="@((status) => CompleteTodo(item, status))"/> *@
+@*                 </td> *@
+@*                 <td> *@
+@*                     <img src="icons/edit.gif" class="funnel" @onclick="@(() => navMgr.NavigateTo($"/EditTodo/{item.Id}"))"/> *@
+@*                 </td> *@
+@*                 <td> *@
+@*                     <label @onclick="@(() => RemoveTodo(item.Id))" style="cursor:pointer; color: red; font-weight: bold"> *@
+@*                         &#x2717; *@
+@*                     </label> *@
+@*                 </td> *@
+@*             </tr> *@
+@*         } *@
+@*         </tbody> *@
+@*     </table> *@
+@* } *@
+@* *@
+@* @if (!string.IsNullOrEmpty(msg)) *@
+@* { *@
+@*     <label style="color: red">@msg</label> *@
+@* } *@
+@* *@
+@* @code { *@
+@*     private IEnumerable<Post>? posts; *@
+@*     private string msg = ""; *@
+@*     private bool doShowFilters = false; *@
+@* *@
+@*     private string? usernameFilter; *@
+@*     private int? userIdFilter; *@
+@*     private string? completedStatusFilter; *@
+@*     private string? titleContainsFilter; *@
+@*      *@
+@*     private async Task LoadPosts() *@
+@*     { *@
+@*         try *@
+@*         { *@
+@*             bool? completedFilterValue = null; *@
+@*             if (!string.IsNullOrEmpty(completedStatusFilter) && !completedStatusFilter.Equals("all")) *@
+@*             { *@
+@*                 completedFilterValue = bool.Parse(completedStatusFilter); *@
+@*             } *@
+@*             post = await todoService.GetAsync(usernameFilter, userIdFilter, completedFilterValue, titleContainsFilter); *@
+@*         } *@
+@*         catch (Exception e) *@
+@*         { *@
+@*             Console.WriteLine(e); *@
+@*             msg = e.Message; *@
+@*         } *@
+@*     } *@
+@* *@
+@*     private async Task CompleteTodo(Todo item, bool status) *@
+@*     { *@
+@*         TodoUpdateDto dto = new(item.Id) *@
+@*         { *@
+@*             IsCompleted = status *@
+@*         }; *@
+@*         try *@
+@*         { *@
+@*             await postService.UpdateAsync(dto); *@
+@*         } *@
+@*         catch (Exception e) *@
+@*         { *@
+@*             Console.WriteLine(e); *@
+@*             msg = e.Message; *@
+@*         } *@
+@*     } *@
+@*     private async Task RemoveTodo(int todoId) *@
+@*     { *@
+@*         msg = ""; *@
+@*         try *@
+@*         { *@
+@*             await todoService.DeleteAsync(todoId); *@
+@*          *@
+@*             var list = new List<Todo>(todos!); *@
+@*             list.RemoveAll(todo => todo.Id == todoId); *@
+@*             todos = list.AsEnumerable(); *@
+@*         } *@
+@*         catch (Exception e) *@
+@*         { *@
+@*             Console.WriteLine(e); *@
+@*             msg = e.Message; *@
+@*         } *@
+@*     } *@
+@* } *@
