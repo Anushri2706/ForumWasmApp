@@ -11,16 +11,16 @@ public class PostHttpClient: IPostService
 
 {
 
-    private readonly System.Net.Http.HttpClient httpClient;
+    private readonly System.Net.Http.HttpClient client;
 
     public PostHttpClient(System.Net.Http.HttpClient httpClient)
     {
-        this.httpClient = httpClient;
+        this.client = httpClient;
     }
 
-    public async Task CreateForum(Post post)
+    public async Task CreatePost(Post post)
     {
-        HttpResponseMessage responseMessage = await httpClient.PostAsJsonAsync("/Post", post);
+        HttpResponseMessage responseMessage = await client.PostAsJsonAsync("/Post", post);
 
         if (!responseMessage.IsSuccessStatusCode)
         {
@@ -30,9 +30,9 @@ public class PostHttpClient: IPostService
 
     }
 
-    public async Task<IEnumerable<Post>> GetForums()
+    public async Task<IEnumerable<Post>> GetPosts()
     {
-        HttpResponseMessage responseMessage = await httpClient.GetAsync("/Post");
+        HttpResponseMessage responseMessage = await client.GetAsync("/Post");
         string result = await responseMessage.Content.ReadAsStringAsync();
 
         if (!responseMessage.IsSuccessStatusCode)
@@ -47,9 +47,9 @@ public class PostHttpClient: IPostService
         return forum;
     }
 
-    public async Task<Post> GetForumById(int id)
+    public async Task<Post> GetPostById(int id)
     {
-        HttpResponseMessage responseMessage = await httpClient.GetAsync($"/Post/{id}");
+        HttpResponseMessage responseMessage = await client.GetAsync($"/Post/{id}");
         string result = await responseMessage.Content.ReadAsStringAsync();
         if (!responseMessage.IsSuccessStatusCode)
         {
@@ -61,4 +61,6 @@ public class PostHttpClient: IPostService
         })!;
         return post;
     }
+
+
 }
