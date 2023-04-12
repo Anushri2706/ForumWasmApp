@@ -30,7 +30,6 @@ else
         <tr>
             <th class="text-center">No.</th>
             <th class="text-center">Title</th>
-            <th class="text-center">Created On</th>
         </tr>
         </thead>
         <tbody>
@@ -38,7 +37,7 @@ else
         {
             <tr>
                 <td class="text-center">@post.Id</td>
-                <td class="text-center" @onclick="() => OpenDetail(post.Id)">@post.Title</td>
+                <td class="text-center" @onclick="() => Open(post.Id)">@post.Title</td>
             </tr>
         }
 
@@ -73,10 +72,10 @@ else
         }
     }
 
-    private async void OpenDetail(int id)
+    private async void Open(int id)
     {
         await postService.GetPostById(id);
-        navMgr.NavigateTo($"/ViewAll/{id}");
+        navMgr.NavigateTo($"/OpenPost/{id}");
     }
 
 

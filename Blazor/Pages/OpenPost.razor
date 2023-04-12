@@ -1,0 +1,60 @@
+@page "/OpenPost/{id:int}"
+@inject IPostService postService
+@using Domain
+@using Domain.Model
+@using HttpsClients.ClientInterfaces
+@inject NavigationManager navMgr
+
+@if (!string.IsNullOrEmpty(msg))
+{
+    <div>
+        <span>@msg</span>
+    </div>
+}
+
+@if (post == null)
+{
+    <span>Loading..</span>
+}
+
+else
+{
+    <div class="container">
+        <div class="users-container">
+            <div class="col user-card w-100 h-50 ">
+                <label class="row border-bottom px-4 border-dark  rounded-0  mx-1 my-3 h2 ">@post.Title</label>
+                <label class="row mx-4 my-3 ">@post.Body</label>
+            </div>
+        </div>
+    </div>
+    
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private Post post;
+    private string msg = "";
+    private string title = "";
+    private string body = "";
+
+    // private int id;
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "";
+        try
+        {
+            post = await postService.GetPostById(Id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    
+    
+
+}
+
+}
+}

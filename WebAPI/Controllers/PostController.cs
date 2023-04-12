@@ -50,7 +50,7 @@ public class PostController:ControllerBase
     }
     
     [HttpGet]
-    [Route("{forumId:int}")]
+    [Route("{Id:int}")]
     public async Task<ActionResult<Post>> GetPostById([FromRoute] int Id)
     {
         try

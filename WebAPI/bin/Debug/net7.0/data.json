@@ -76,6 +76,16 @@
       "Id": 2,
       "Title": "helo",
       "Body": "crazy"
+    },
+    {
+      "Id": 3,
+      "Title": "qwert",
+      "Body": "qwert"
+    },
+    {
+      "Id": 4,
+      "Title": "Testing New Post",
+      "Body": "My new post"
     }
   ]
 }
