@@ -40,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3BlblBvc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tweety/RiderProjects/ForumWasmApp/Blazor/Pages/RegisterUser.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXJVc2VyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/tweety/RiderProjects/ForumWasmApp/Blazor/Pages/ViewPost.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmlld1Bvc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -63,6 +59,10 @@ build_metadata.AdditionalFiles.CssScope = b-sejvdau62l
 [/Users/tweety/RiderProjects/ForumWasmApp/Blazor/Pages/LoginPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-euf4xeui8e
+
+[/Users/tweety/RiderProjects/ForumWasmApp/Blazor/Pages/RegisterUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXJVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-l0d7bm1o0y
 
 [/Users/tweety/RiderProjects/ForumWasmApp/Blazor/Pages/ViewUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmlld1VzZXIucmF6b3I=

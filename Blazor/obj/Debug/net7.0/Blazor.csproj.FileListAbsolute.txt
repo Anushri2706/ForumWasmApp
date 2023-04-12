@@ -55,3 +55,4 @@
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/Blazor.pdb
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/Blazor.genruntimeconfig.cache
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/ref/Blazor.dll
+/Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/Pages/RegisterUser.razor.rz.scp.css

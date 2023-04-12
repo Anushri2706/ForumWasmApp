@@ -7,52 +7,29 @@
 @inject IUserService UserService;
 
 <AuthorizeView>
-<NotAuthorized>
-     <div class="card">
-                <h3>Please login</h3>
-                <div class="field">
-                    <label>User name:</label>
-                    <input type="text" @bind="userName"/>
-                </div>
-                <div class="field">
-                    <label style="text-align: center">Password:</label>
-                    <input type="password" @bind="password"/>
-                </div>
-                @if (!string.IsNullOrEmpty(errorLabel))
-                {
-                    <div class="field">
-                        <label style="color: red">
-                            @errorLabel
-                        </label>
-                    </div>
-                }
-                <div class="field">
-                    <button class="loginbtn" @onclick="Create">Log in</button>
-                </div>
-            </div>
-
-    <div class="card">
-        <h3>Register</h3>
-        <div class="field">
-            <label>Username:</label>
-            <input type="text" @bind="userName"/>
-        </div>
-        <div class="field">
-            <label style="text-align: center">Password:</label>
-            <input type="password" @bind="password"/>
-        </div>
-        @if (!string.IsNullOrEmpty(errorLabel))
-        {
-            <div class="field">
-                <label style="color: red">
-                    @errorLabel
-                </label>
-            </div>
-        }
-        <div class="field">
-            <button class="loginbtn" @onclick="Create">Save</button>
-        </div>
-    </div>
+    <NotAuthorized>
+        <div class="card">
+                   <h3>Register</h3>
+                   <div class="field">
+                       <label>Username:</label>
+                       <input type="text" @bind="userName"/>
+                   </div>
+                   <div class="field">
+                       <label style="text-align: center">Password:</label>
+                       <input type="password" @bind="password"/>
+                   </div>
+                   @if (!string.IsNullOrEmpty(errorLabel))
+                   {
+                       <div class="field">
+                           <label style="color: red">
+                               @errorLabel
+                           </label>
+                       </div>
+                   }
+                   <div class="field">
+                       <button class="loginbtn" @onclick="Create">Save</button>
+                   </div>
+               </div>
 </NotAuthorized>
 </AuthorizeView>
 @code {
@@ -73,7 +50,7 @@
             password = "";
             resultMsg = "User successfully created";
             color = "green";
-            // navMgr.NavigateTo("/LoginPage");
+            navMgr.NavigateTo("/LoginPage");
         }
         catch (Exception e)
         {

@@ -64,6 +64,16 @@
       "Id": 13,
       "UserName": "Anushri Gupta",
       "password": "123456"
+    },
+    {
+      "Id": 14,
+      "UserName": "Anushri2",
+      "password": "123456"
+    },
+    {
+      "Id": 15,
+      "UserName": "Test2",
+      "password": "test1"
     }
   ],
   "Posts": [
@@ -86,6 +96,11 @@
       "Id": 4,
       "Title": "Testing New Post",
       "Body": "My new post"
+    },
+    {
+      "Id": 5,
+      "Title": "New Post Number1",
+      "Body": "My first post"
     }
   ]
 }
