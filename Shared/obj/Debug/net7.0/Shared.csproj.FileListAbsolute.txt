@@ -1,0 +1,15 @@
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/bin/Debug/net7.0/Shared.deps.json
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/bin/Debug/net7.0/Shared.dll
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/bin/Debug/net7.0/Shared.pdb
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/bin/Debug/net7.0/Domain.dll
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/bin/Debug/net7.0/Domain.pdb
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.csproj.AssemblyReference.cache
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.AssemblyInfoInputs.cache
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.AssemblyInfo.cs
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.csproj.CoreCompileInputs.cache
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.csproj.CopyComplete
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.dll
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/refint/Shared.dll
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/Shared.pdb
+/Users/tweety/RiderProjects/ForumWasmApp/Shared/obj/Debug/net7.0/ref/Shared.dll

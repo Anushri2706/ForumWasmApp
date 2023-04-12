@@ -1,12 +1,11 @@
-using Domain.DTOs;
+using Domain;
 using Domain.Model;
 
-namespace Application.DaoInterfaces;
+namespace Application.DAOInterfaces;
 
 public interface IPostDao
 {
-    Task<Post> CreateAsync(Post todo);
-    Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchParameters);
-    Task<Post> GetByIdAsync(int id);
-
+    Task<Post> CreatePostAsync(Post dto);
+    Task<Post?> GetPostById(int id);
+    Task<IEnumerable<Post>> GetAllPostsAsync(Post post);
 }

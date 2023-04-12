@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/8lo0n3VJgeQIUsE7mIFZVS2xEOo7PBfrEjYqs7TURib81MGxg+jT2UcxFZqvW8Vl+n3443AWODZnjKEwt956Q==",
+  "success": true,
+  "projectFilePath": "/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/HttpsClients.csproj",
+  "expectedPackageFiles": [
+    "/Users/tweety/.nuget/packages/microsoft.aspnetcore.openapi/7.0.4/microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
+    "/Users/tweety/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512"
+  ],
+  "logs": []
+}

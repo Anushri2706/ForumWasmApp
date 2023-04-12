@@ -6,8 +6,9 @@ namespace Application.DaoInterfaces;
 public interface IUserDao
 {
     Task<User> CreateAsync(User user);
-    Task<User?> GetByUsername(string userName);
-    public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters);
+    Task<User?> GetByUsername(string userName, string password);
+  //  public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters);
     Task<User?> GetByIdAsync(int id);
+    Task<IEnumerable<User?>> getAllUsersAsync();
 
 }

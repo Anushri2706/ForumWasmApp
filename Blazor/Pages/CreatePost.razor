@@ -1,0 +1,63 @@
+@inject IPostService postService;
+@page "/CreatePost"
+@using Domain
+@using Domain.Model
+@using HttpsClients.ClientInterfaces
+@inject NavigationManager navMgr
+
+
+<AuthorizeView>
+    <Authorized>
+        <div class="card">
+            <h3>Create Post</h3>
+            <div class="form-group field">
+                <label>Title:</label>
+                
+                <input type="text" @bind="Title" @bind:event="oninput"/>
+                <label>Description:</label>
+                                
+                <input type="text" @bind="Description" @bind:event="oninput"/>
+
+
+                @if (!string.IsNullOrEmpty(msg))
+                {
+                    <label style="color: @color">@msg</label>
+                }
+            </div>
+            <div class="button-row">
+                <button @onclick="Create" disabled="@(string.IsNullOrEmpty(Title))" class="acceptbtn">Create</button>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        Login to create posts!
+    </NotAuthorized> 
+</AuthorizeView>
+
+
+@code {
+
+    private IEnumerable<Post> posts;
+    private string msg = "";
+    private string Title = "";
+    private string Description = "";
+    private string color = "";
+
+    private async Task Create()
+    {
+        msg = "";
+        try
+        {
+            await postService.CreatePost(new Post(Title,Description));
+            Title = "";
+            Description = "";
+            msg = "Post successfully created";
+            color = "green";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+}

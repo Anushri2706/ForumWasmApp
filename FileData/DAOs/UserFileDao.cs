@@ -29,8 +29,9 @@ public class UserFileDao : IUserDao
 
         return Task.FromResult(user);
     }
+    
 
-    public Task<User?> GetByUsername(string userName)
+    public Task<User?> GetByUsername(string userName, string password)
     {
         User? existing = context.Users.FirstOrDefault(u =>
             u.UserName.Equals(userName, StringComparison.OrdinalIgnoreCase)
@@ -39,21 +40,27 @@ public class UserFileDao : IUserDao
     }
 
     
-    public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
-    {
-        IEnumerable<User> users = context.Users.AsEnumerable();
-        if (searchParameters.UsernameContains != null)
-        {
-            users = context.Users.Where(u =>
-                u.UserName.Contains(searchParameters.UsernameContains, StringComparison.OrdinalIgnoreCase));
-        }
-    
-        return Task.FromResult(users);
-    }
+    // public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
+    // {
+    //     IEnumerable<User> users = context.Users.AsEnumerable();
+    //     if (searchParameters.UsernameContains != null)
+    //     {
+    //         users = context.Users.Where(u =>
+    //             u.UserName.Contains(searchParameters.UsernameContains, StringComparison.OrdinalIgnoreCase));
+    //     }
+    //
+    //     return Task.FromResult(users);
+    // }
     
     public Task<User?> GetByIdAsync(int id)
     {
         User? existing = context.Users.FirstOrDefault(u => u.Id.Equals(id));
         return Task.FromResult(existing);
+    }
+
+    public Task<IEnumerable<User?>> getAllUsersAsync()
+    {
+        IEnumerable<User> users = context.Users.AsEnumerable();
+        return Task.FromResult(users);
     }
 }
