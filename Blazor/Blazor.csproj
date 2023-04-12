@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\HttpsClients\HttpsClients.csproj" />
-      <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>

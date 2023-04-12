@@ -9,33 +9,33 @@
 <AuthorizeView>
     <NotAuthorized>
         <div class="card">
-                   <h3>Register</h3>
-                   <div class="field">
-                       <label>Username:</label>
-                       <input type="text" @bind="userName"/>
-                   </div>
-                   <div class="field">
-                       <label style="text-align: center">Password:</label>
-                       <input type="password" @bind="password"/>
-                   </div>
-                   @if (!string.IsNullOrEmpty(errorLabel))
-                   {
-                       <div class="field">
-                           <label style="color: red">
-                               @errorLabel
-                           </label>
-                       </div>
-                   }
-                   <div class="field">
-                       <button class="loginbtn" @onclick="Create">Save</button>
-                   </div>
-               </div>
-</NotAuthorized>
+            <h3>Register</h3>
+            <div class="field">
+                <label>Username:</label>
+                <input type="text" @bind="userName"/>
+            </div>
+            <div class="field">
+                <label style="text-align: center">Password:</label>
+                <input type="password" @bind="password"/>
+            </div>
+            @if (!string.IsNullOrEmpty(errorLabel))
+            {
+                <div class="field">
+                    <label style="color: red">
+                        @errorLabel
+                    </label>
+                </div>
+            }
+            <div class="field">
+                <button class="loginbtn" @onclick="Create">Save</button>
+            </div>
+        </div>
+    </NotAuthorized>
 </AuthorizeView>
+
 @code {
     private string userName;
     private string password;
-    private string rePassword;
     private string resultMsg;
     private string color;
     private string errorLabel;
@@ -58,9 +58,5 @@
             color = "red";
         }
     }
-
-    private void Login()
-    {
-        navMgr.NavigateTo("/LoginPage");
-    }
+    
 }

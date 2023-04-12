@@ -110,11 +110,7 @@ public class UserController : ControllerBase
         return serializedToken;
     }
     
-    [HttpGet("allowanon"), AllowAnonymous]
-    public ActionResult GetAsAnon()
-    {
-        return Ok("This was accepted as anonymous");
-    }
+
     
     
 }

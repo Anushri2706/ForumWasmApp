@@ -74,6 +74,21 @@
       "Id": 15,
       "UserName": "Test2",
       "password": "test1"
+    },
+    {
+      "Id": 16,
+      "UserName": "NewUser",
+      "password": "NewUser"
+    },
+    {
+      "Id": 17,
+      "UserName": "Test134",
+      "password": "12345"
+    },
+    {
+      "Id": 18,
+      "UserName": "New User",
+      "password": "123456"
     }
   ],
   "Posts": [
@@ -101,6 +116,16 @@
       "Id": 5,
       "Title": "New Post Number1",
       "Body": "My first post"
+    },
+    {
+      "Id": 6,
+      "Title": "MyFirstPost",
+      "Body": "My first post today"
+    },
+    {
+      "Id": 7,
+      "Title": "Post Number1",
+      "Body": "Test post"
     }
   ]
 }

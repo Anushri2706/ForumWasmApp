@@ -560,28 +560,13 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Domain": "1.0.0",
-          "Microsoft.AspNetCore.OpenApi": "7.0.4",
-          "Shared": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HttpsClients.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HttpsClients.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Domain": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.4"
         },
         "compile": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/HttpsClients.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/HttpsClients.dll": {}
         }
       }
     }
@@ -1366,11 +1351,6 @@
       "type": "project",
       "path": "../HttpsClients/HttpsClients.csproj",
       "msbuildProject": "../HttpsClients/HttpsClients.csproj"
-    },
-    "Shared/1.0.0": {
-      "type": "project",
-      "path": "../Shared/Shared.csproj",
-      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1379,8 +1359,7 @@
       "Microsoft.AspNetCore.Components.Authorization >= 7.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 7.0.4",
-      "Microsoft.AspNetCore.OpenApi >= 7.0.4",
-      "Shared >= 1.0.0"
+      "Microsoft.AspNetCore.OpenApi >= 7.0.4"
     ]
   },
   "packageFolders": {
@@ -1410,9 +1389,6 @@
           "projectReferences": {
             "/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/HttpsClients.csproj": {
               "projectPath": "/Users/tweety/RiderProjects/ForumWasmApp/HttpsClients/HttpsClients.csproj"
-            },
-            "/Users/tweety/RiderProjects/ForumWasmApp/Shared/Shared.csproj": {
-              "projectPath": "/Users/tweety/RiderProjects/ForumWasmApp/Shared/Shared.csproj"
             }
           }
         }

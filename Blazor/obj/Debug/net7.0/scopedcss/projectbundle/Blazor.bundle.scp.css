@@ -138,12 +138,12 @@ main[b-qt6tgh2907] {
 }
 /* _content/Blazor/Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-32xpj7b96w] {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(51, 110, 12);
 }
 
 .top-row[b-32xpj7b96w] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: salmon;
 }
 
 .navbar-brand[b-32xpj7b96w] {

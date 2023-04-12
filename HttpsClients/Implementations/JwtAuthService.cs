@@ -55,18 +55,18 @@ public class JwtAuthService : IAuthService
         return Task.CompletedTask;    
     }
 
-    public async Task RegisterAsync(User user)
-    {
-        string userAsJson = JsonSerializer.Serialize(user);
-        StringContent content = new(userAsJson, Encoding.UTF8, "application/json");
-        HttpResponseMessage response = await client.PostAsync("https://localhost:7008/User/register", content);
-        string responseContent = await response.Content.ReadAsStringAsync();
-
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new Exception(responseContent);
-        }    
-    }
+    // public async Task RegisterAsync(User user)
+    // {
+    //     string userAsJson = JsonSerializer.Serialize(user);
+    //     StringContent content = new(userAsJson, Encoding.UTF8, "application/json");
+    //     HttpResponseMessage response = await client.PostAsync("https://localhost:7008/User/register", content);
+    //     string responseContent = await response.Content.ReadAsStringAsync();
+    //
+    //     if (!response.IsSuccessStatusCode)
+    //     {
+    //         throw new Exception(responseContent);
+    //     }    
+    // }
     
     private static IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
     {
