@@ -24,7 +24,7 @@ public class PostFileDao: IPostDao
             id++;
         }
         dto.Id = id;
-        
+        context.Posts.Add(dto);
         context.SaveChanges();
 
         return Task.FromResult(dto);

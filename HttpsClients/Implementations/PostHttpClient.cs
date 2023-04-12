@@ -20,7 +20,7 @@ public class PostHttpClient: IPostService
 
     public async Task CreatePost(Post post)
     {
-        HttpResponseMessage responseMessage = await client.PostAsJsonAsync("/Post", post);
+        HttpResponseMessage responseMessage = await client.PostAsJsonAsync("https://localhost:7295/Post", post);
 
         if (!responseMessage.IsSuccessStatusCode)
         {

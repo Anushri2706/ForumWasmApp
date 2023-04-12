@@ -54,6 +54,16 @@
       "Id": 11,
       "UserName": "Anushri1",
       "password": "123456"
+    },
+    {
+      "Id": 12,
+      "UserName": "Testing",
+      "password": "testing"
+    },
+    {
+      "Id": 13,
+      "UserName": "Anushri Gupta",
+      "password": "123456"
     }
   ],
   "Posts": [
@@ -62,11 +72,15 @@
       "Title": "Testing",
       "Body": "Test1"
     },
-    
     {
       "Id": 2,
       "Title": "helo",
       "Body": "crazy"
+    },
+    {
+      "Id": 3,
+      "Title": "qwert",
+      "Body": "qwert"
     }
   ]
 }

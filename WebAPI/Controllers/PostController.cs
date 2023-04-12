@@ -51,11 +51,11 @@ public class PostController:ControllerBase
     
     [HttpGet]
     [Route("{forumId:int}")]
-    public async Task<ActionResult<Post>> GetForumById([FromRoute] int forumId)
+    public async Task<ActionResult<Post>> GetPostById([FromRoute] int Id)
     {
         try
         {
-            Post dto = await postLogic.GetByIdAsync(forumId);
+            Post dto = await postLogic.GetByIdAsync(Id);
             return Ok(dto);
         }
         catch (Exception e)
