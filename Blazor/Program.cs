@@ -3,6 +3,7 @@ using Blazor.Auth;
 using Blazor.Data;
 using Blazor.Services;
 using Blazor.Services.Http;
+using HTTPClient.Implementation;
 using HttpsClients.ClientInterfaces;
 using HttpsClients.Implementations;
 using Microsoft.AspNetCore.Authorization;

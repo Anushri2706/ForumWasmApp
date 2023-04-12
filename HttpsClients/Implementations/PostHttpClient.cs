@@ -1,113 +1,64 @@
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Text;
 using System.Text.Json;
-using Domain.DTOs;
+using Domain;
 using Domain.Model;
 using HttpsClients.ClientInterfaces;
 
-namespace HttpsClients.Implementations;
+namespace HTTPClient.Implementation;
 
-public class PostHttpClient : IPostService
+public class PostHttpClient: IPostService
+
 {
-    private readonly HttpClient client;
-    
-    public PostHttpClient(HttpClient client)
+
+    private readonly System.Net.Http.HttpClient httpClient;
+
+    public PostHttpClient(System.Net.Http.HttpClient httpClient)
     {
-        this.client = client;
+        this.httpClient = httpClient;
     }
-    
-    public async Task<Post> CreateAsync(PostCreationDto dto)
+
+    public async Task CreateForum(Post post)
     {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/Post", dto);
-        string result = await response.Content.ReadAsStringAsync();
-        
-        if (!response.IsSuccessStatusCode)
+        HttpResponseMessage responseMessage = await httpClient.PostAsJsonAsync("/Post", post);
+
+        if (!responseMessage.IsSuccessStatusCode)
+        {
+            string result = await responseMessage.Content.ReadAsStringAsync();
+            throw new Exception(result);
+        }
+
+    }
+
+    public async Task<IEnumerable<Post>> GetForums()
+    {
+        HttpResponseMessage responseMessage = await httpClient.GetAsync("/Post");
+        string result = await responseMessage.Content.ReadAsStringAsync();
+
+        if (!responseMessage.IsSuccessStatusCode)
         {
             throw new Exception(result);
         }
 
-        Post post = JsonSerializer.Deserialize<Post>(result)!;
-        return post;
-
-    }
-
-    public async Task<ICollection<Post>> GetAsync(string? userName, int? userId, string? title)
-    {
-        string query = ConstructQuery(userName, userId, title);
-
-        HttpResponseMessage response = await client.GetAsync("/Post"+query);
-        string content = await response.Content.ReadAsStringAsync();
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new Exception(content);
-        }
-
-        ICollection<Post> posts = JsonSerializer.Deserialize<ICollection<Post>>(content, new JsonSerializerOptions
+        ICollection<Post> forum = JsonSerializer.Deserialize<ICollection<Post>>(result, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         })!;
-        return posts;
+        return forum;
     }
 
-    public async Task UpdateAsync(PostUpdateDto dto)
+    public async Task<Post> GetForumById(int id)
     {
-        string dtoAsJson = JsonSerializer.Serialize(dto);
-        StringContent body = new StringContent(dtoAsJson, Encoding.UTF8, "application/json");
-
-        HttpResponseMessage response = await client.PatchAsync("/post", body);
-        if (!response.IsSuccessStatusCode)
+        HttpResponseMessage responseMessage = await httpClient.GetAsync($"/Post/{id}");
+        string result = await responseMessage.Content.ReadAsStringAsync();
+        if (!responseMessage.IsSuccessStatusCode)
         {
-            string content = await response.Content.ReadAsStringAsync();
-            throw new Exception(content);
-        }    
-    }
-
-    public async Task<PostBasicDto> GetByIdAsync(int Id)
-    {
-        HttpResponseMessage response = await client.GetAsync($"/post/{Id}");
-        string content = await response.Content.ReadAsStringAsync();
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new Exception(content);
+            throw new Exception(result);
         }
-
-        PostBasicDto post = JsonSerializer.Deserialize<PostBasicDto>(content, 
-            new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            }
-        )!;
-        return post;    }
-
-    public async Task DeleteAsync(int id)
-    {
-        HttpResponseMessage response = await client.DeleteAsync($"Post/{id}");
-        if (!response.IsSuccessStatusCode)
+        Post post = JsonSerializer.Deserialize<Post>(result, new JsonSerializerOptions
         {
-            string content = await response.Content.ReadAsStringAsync();
-            throw new Exception(content);
-        }    }
-
-    private static string ConstructQuery(string? userName, int? userId, string? titleContains)
-    {
-        string query = "";
-        if (!string.IsNullOrEmpty(userName))
-        {
-            query += $"?username={userName}";
-        }
-
-        if (userId != null)
-        {
-            query += string.IsNullOrEmpty(query) ? "?" : "&";
-            query += $"userid={userId}";
-        }
-
-        if (!string.IsNullOrEmpty(titleContains))
-        {
-            query += string.IsNullOrEmpty(query) ? "?" : "&";
-            query += $"titlecontains={titleContains}";
-        }
-
-        return query;
+            PropertyNameCaseInsensitive = true
+        })!;
+        return post;
     }
 }

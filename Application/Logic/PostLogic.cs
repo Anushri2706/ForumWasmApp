@@ -1,97 +1,50 @@
-using Application.DaoInterfaces;
+using Application.DAOInterfaces;
 using Application.LogicInterfaces;
-using Domain.DTOs;
+using Domain;
 using Domain.Model;
 
-namespace Application.Logic;
+namespace Application.LogicImpl;
 
 public class PostLogic : IPostLogic
 {
+
     private readonly IPostDao postDao;
-    private readonly IUserDao userDao;
-    
-    public PostLogic(IPostDao postDao, IUserDao userDao)
+
+    public PostLogic(IPostDao postDao)
     {
         this.postDao = postDao;
-        this.userDao = userDao;
     }
 
-    public async Task<Post> CreateAsync(PostCreationDto dto)
+    public async Task<Post> CreatePostAsync(Post dto)
     {
-        User? user = await userDao.GetByIdAsync(dto.OwnerId);
-        if (user == null)
-        {
-            throw new Exception($"User with id {dto.OwnerId} was not found.");
-        }
-        
-        Post post = new Post(user, dto.Title, dto.Body);
-        ValidatePost(post);
-        Post created = await postDao.CreateAsync(post);
+        ValidatePost(dto);
+        Post post = new Post(dto.Title, dto.Body);
+        Post created = await postDao.CreatePostAsync(post);
         return created;
     }
 
-    public Task<IEnumerable<Post>> GetAsync(SearchPostParametersDto searchParameters)
+    public async Task<IEnumerable<Post>> GetAllPostsAsync(Post post)
     {
-        return postDao.GetAsync(searchParameters);
+        IEnumerable<Post> posts = await postDao.GetAllPostsAsync(post);
+        return posts;
     }
     
-    public async Task<PostBasicDto> GetByIdAsync(int id)
+    public async Task<Post> GetByIdAsync(int Id)
     {
-        Post? post = await postDao.GetByIdAsync(id);
+        Post? post=  await postDao.GetPostById(Id);
         if (post == null)
         {
-            throw new Exception($"Post with id {id} not found");
-        }
-
-        return new PostBasicDto(post.Id, post.Owner.UserName, post.Title, post.Body);
-    }
-    
-    public async Task UpdateAsync(PostUpdateDto dto)
-    {
-        Post? existing = await postDao.GetByIdAsync(dto.Id);
-
-        if (existing == null)
-        {
-            throw new Exception($"Todo with ID {dto.Id} not found!");
-        }
-
-        User? user = null;
-        if (dto.OwnerId != null)
-        {
-            user = await userDao.GetByIdAsync((int)dto.OwnerId);
-            if (user == null)
-            {
-                throw new Exception($"User with id {dto.OwnerId} was not found.");
-            }
+            throw new Exception($"Post with {Id} was not found");
         }
         
-
-        User User = user ?? existing.Owner;
-        string title = dto.Title ?? existing.Title;
-        string body = dto.Body ?? existing.Body;
-    
-        Post updated = new (User, title, body)
-        {
-            Id = existing.Id,
-        };
-
-        ValidatePost(updated);
-
-        await postDao.UpdateAsync(updated);
-    }
-    
-    public async Task DeleteAsync(int id)
-    {
-        Post? todo = await postDao.GetByIdAsync(id);
-        if (todo == null)
-        {
-            throw new Exception($"Todo with ID {id} was not found!");
-        }
-        await postDao.DeleteAsync(id);
+        return post;
     }
 
-    private void ValidatePost(Post dto)
+    
+
+    private void ValidatePost(Post post)
     {
-        if (string.IsNullOrEmpty(dto.Title)) throw new Exception("Title cannot be empty.");
+        if (string.IsNullOrEmpty(post.Title)) throw new Exception("Title cannot be empty");
+        if (string.IsNullOrEmpty(post.Body)) throw new Exception("Description cannot be empty");
     }
 }

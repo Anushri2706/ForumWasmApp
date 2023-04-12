@@ -59,13 +59,14 @@
   "Posts": [
     {
       "Id": 1,
-      "Owner": {
-        "Id": 1,
-        "UserName": "Anushri",
-        "password": null
-      },
       "Title": "Testing",
       "Body": "Test1"
+    },
+    
+    {
+      "Id": 2,
+      "Title": "helo",
+      "Body": "crazy"
     }
   ]
 }
