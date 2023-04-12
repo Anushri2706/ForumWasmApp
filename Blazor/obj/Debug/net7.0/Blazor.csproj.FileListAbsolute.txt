@@ -22,9 +22,7 @@
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/Microsoft.OpenApi.dll
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/Domain.dll
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/HttpsClients.dll
-/Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/Shared.dll
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/HttpsClients.pdb
-/Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/Shared.pdb
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/bin/Debug/net7.0/Domain.pdb
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/Blazor.csproj.AssemblyReference.cache
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig
@@ -44,7 +42,6 @@
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/staticwebassets.development.json
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/Pages/LoginButtons.razor.rz.scp.css
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/Pages/LoginPage.razor.rz.scp.css
-/Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/Pages/ViewUser.razor.rz.scp.css
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/Shared/MainLayout.razor.rz.scp.css
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/Shared/NavMenu.razor.rz.scp.css
 /Users/tweety/RiderProjects/ForumWasmApp/Blazor/obj/Debug/net7.0/scopedcss/bundle/Blazor.styles.css

@@ -32,5 +32,3 @@
 /Users/tweety/RiderProjects/ForumWasmApp/FileData/obj/Debug/net7.0/refint/FileData.dll
 /Users/tweety/RiderProjects/ForumWasmApp/FileData/obj/Debug/net7.0/FileData.pdb
 /Users/tweety/RiderProjects/ForumWasmApp/FileData/obj/Debug/net7.0/ref/FileData.dll
-/Users/tweety/RiderProjects/ForumWasmApp/FileData/bin/Debug/net7.0/Shared.dll
-/Users/tweety/RiderProjects/ForumWasmApp/FileData/bin/Debug/net7.0/Shared.pdb

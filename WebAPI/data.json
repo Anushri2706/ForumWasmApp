@@ -89,6 +89,11 @@
       "Id": 18,
       "UserName": "New User",
       "password": "123456"
+    },
+    {
+      "Id": 19,
+      "UserName": "Adrian",
+      "password": "12345"
     }
   ],
   "Posts": [
@@ -126,6 +131,16 @@
       "Id": 7,
       "Title": "Post Number1",
       "Body": "Test post"
+    },
+    {
+      "Id": 8,
+      "Title": "DNP ",
+      "Body": "assginment"
+    },
+    {
+      "Id": 9,
+      "Title": "Adrian\u0027s first post",
+      "Body": "Hello hi bye bye"
     }
   ]
 }

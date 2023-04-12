@@ -37,8 +37,7 @@
       "Application/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
-          "Microsoft.AspNetCore.OpenApi": "7.0.4",
-          "Shared": "1.0.0"
+          "Microsoft.AspNetCore.OpenApi": "7.0.4"
         },
         "runtime": {
           "Application.dll": {}
@@ -50,15 +49,6 @@
         },
         "runtime": {
           "Domain.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
-        "dependencies": {
-          "Domain": "1.0.0",
-          "Microsoft.AspNetCore.OpenApi": "7.0.4"
-        },
-        "runtime": {
-          "Shared.dll": {}
         }
       }
     }
@@ -89,11 +79,6 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

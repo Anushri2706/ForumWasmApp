@@ -12,8 +12,7 @@
           "Microsoft.AspNetCore.Components.Authorization": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "7.0.4",
-          "Microsoft.AspNetCore.OpenApi": "7.0.4",
-          "Shared": "1.0.0"
+          "Microsoft.AspNetCore.OpenApi": "7.0.4"
         },
         "runtime": {
           "Blazor.dll": {}
@@ -255,20 +254,10 @@
       "HttpsClients/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
-          "Microsoft.AspNetCore.OpenApi": "7.0.4",
-          "Shared": "1.0.0"
-        },
-        "runtime": {
-          "HttpsClients.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
-        "dependencies": {
-          "Domain": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.4"
         },
         "runtime": {
-          "Shared.dll": {}
+          "HttpsClients.dll": {}
         }
       }
     }
@@ -495,11 +484,6 @@
       "sha512": ""
     },
     "HttpsClients/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
