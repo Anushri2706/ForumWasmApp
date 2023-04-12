@@ -5,8 +5,8 @@ namespace HttpsClients.ClientInterfaces;
 
 public interface IPostService
 {
-    Task CreateForum(Post forum);
-    Task<IEnumerable<Post>> GetForums();
-    Task<Post> GetForumById(int forumId);
+    Task CreatePost(Post post);
+    Task<IEnumerable<Post>> GetPosts();
+    Task<Post> GetPostById(int Id);
 
 }

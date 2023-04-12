@@ -64,7 +64,7 @@ else
         msg = "";
         try
         {
-            posts = await postService.GetForums();
+            posts = await postService.GetPosts();
         }
         catch (Exception e)
         {
@@ -75,7 +75,7 @@ else
 
     private async void OpenDetail(int id)
     {
-        await postService.GetForumById(id);
+        await postService.GetPostById(id);
         navMgr.NavigateTo($"/ViewAll/{id}");
     }
 

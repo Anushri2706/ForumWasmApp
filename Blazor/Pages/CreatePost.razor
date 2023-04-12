@@ -48,10 +48,11 @@
         msg = "";
         try
         {
-            await postService.CreateForum(new Post(Title,Description));
+            await postService.CreatePost(new Post(Title,Description));
             Title = "";
             Description = "";
             msg = "Post successfully created";
+            color = "green";
         }
         catch (Exception e)
         {

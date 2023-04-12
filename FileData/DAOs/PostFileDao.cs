@@ -38,13 +38,13 @@ public class PostFileDao: IPostDao
 
     public Task<IEnumerable<Post>> GetAllPostsAsync(Post post)
     {
-        IEnumerable<Post> forums = context.Posts.AsEnumerable();
+        IEnumerable<Post> posts = context.Posts.AsEnumerable();
         if (post.Title!=null)
         {
-            forums = context.Posts.Where(u =>
+            posts = context.Posts.Where(u =>
                 u.Title.Contains(post.Title, StringComparison.OrdinalIgnoreCase) & u.Body.Contains(post.Body));
         }
 
-        return Task.FromResult(forums);
+        return Task.FromResult(posts);
     }
 }

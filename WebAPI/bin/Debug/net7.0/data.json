@@ -54,6 +54,11 @@
       "Id": 11,
       "UserName": "Anushri1",
       "password": "123456"
+    },
+    {
+      "Id": 12,
+      "UserName": "Testing",
+      "password": "testing"
     }
   ],
   "Posts": [
@@ -62,6 +67,7 @@
       "Title": "Testing",
       "Body": "Test1"
     },
+    
     {
       "Id": 2,
       "Title": "helo",

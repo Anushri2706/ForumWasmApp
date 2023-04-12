@@ -59,6 +59,7 @@ public class UserController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
     [HttpPost, Route("login")]
     public async Task<ActionResult> Login([FromBody] UserLoginDto userLoginDto)
     {
@@ -74,6 +75,7 @@ public class UserController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
     private List<Claim> GenerateClaims(User user)
     {
         var claims = new[]

@@ -40,17 +40,17 @@ public class UserFileDao : IUserDao
     }
 
     
-    public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
-    {
-        IEnumerable<User> users = context.Users.AsEnumerable();
-        if (searchParameters.UsernameContains != null)
-        {
-            users = context.Users.Where(u =>
-                u.UserName.Contains(searchParameters.UsernameContains, StringComparison.OrdinalIgnoreCase));
-        }
-    
-        return Task.FromResult(users);
-    }
+    // public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
+    // {
+    //     IEnumerable<User> users = context.Users.AsEnumerable();
+    //     if (searchParameters.UsernameContains != null)
+    //     {
+    //         users = context.Users.Where(u =>
+    //             u.UserName.Contains(searchParameters.UsernameContains, StringComparison.OrdinalIgnoreCase));
+    //     }
+    //
+    //     return Task.FromResult(users);
+    // }
     
     public Task<User?> GetByIdAsync(int id)
     {
