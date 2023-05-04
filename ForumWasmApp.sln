@@ -8,6 +8,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileData", "FileData\FileData.csproj", "{BEEAE37E-25A4-46AB-82A7-C3E910492829}"
 EndProject
+<<<<<<< Updated upstream
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor", "Blazor\Blazor.csproj", "{06408F91-1180-4FE5-9827-B9B46C3EC960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpsClients", "HttpsClients\HttpsClients.csproj", "{F89619CE-1E79-4012-9350-EF419D42A621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfcDataAccess", "EfcDataAccess\EfcDataAccess.csproj", "{8CA16CD9-8A90-4658-9119-852AF35C31F3}"
+EndProject
+>>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +39,20 @@ Global
 		{BEEAE37E-25A4-46AB-82A7-C3E910492829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEEAE37E-25A4-46AB-82A7-C3E910492829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEEAE37E-25A4-46AB-82A7-C3E910492829}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< Updated upstream
+=======
+		{06408F91-1180-4FE5-9827-B9B46C3EC960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06408F91-1180-4FE5-9827-B9B46C3EC960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06408F91-1180-4FE5-9827-B9B46C3EC960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06408F91-1180-4FE5-9827-B9B46C3EC960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89619CE-1E79-4012-9350-EF419D42A621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89619CE-1E79-4012-9350-EF419D42A621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89619CE-1E79-4012-9350-EF419D42A621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89619CE-1E79-4012-9350-EF419D42A621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA16CD9-8A90-4658-9119-852AF35C31F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA16CD9-8A90-4658-9119-852AF35C31F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA16CD9-8A90-4658-9119-852AF35C31F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA16CD9-8A90-4658-9119-852AF35C31F3}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 EndGlobal

@@ -2,7 +2,107 @@
   "Users": [
     {
       "Id": 1,
+<<<<<<< Updated upstream
       "UserName": "Anushri"
+=======
+      "UserName": "Anushri",
+      "password": null
+    },
+    {
+      "Id": 2,
+      "UserName": "ohi",
+      "password": null
+    },
+    {
+      "Id": 3,
+      "UserName": "Anushr",
+      "password": null
+    },
+    {
+      "Id": 4,
+      "UserName": "Anusr",
+      "password": null
+    },
+    {
+      "Id": 5,
+      "UserName": "Ola",
+      "password": null
+    },
+    {
+      "Id": 6,
+      "UserName": "Test1",
+      "password": null
+    },
+    {
+      "Id": 7,
+      "UserName": "asjahde",
+      "password": "dsfhiewuf"
+    },
+    {
+      "Id": 8,
+      "UserName": "Ashok",
+      "password": "123456"
+    },
+    {
+      "Id": 9,
+      "UserName": "Helo",
+      "password": "efuehafuhew"
+    },
+    {
+      "Id": 10,
+      "UserName": "Anushri ",
+      "password": "secret@22"
+    },
+    {
+      "Id": 11,
+      "UserName": "Anushri1",
+      "password": "123456"
+    },
+    {
+      "Id": 12,
+      "UserName": "Testing",
+      "password": "testing"
+    },
+    {
+      "Id": 13,
+      "UserName": "Anushri Gupta",
+      "password": "123456"
+    },
+    {
+      "Id": 14,
+      "UserName": "Anushri2",
+      "password": "123456"
+    },
+    {
+      "Id": 15,
+      "UserName": "Test2",
+      "password": "test1"
+    },
+    {
+      "Id": 16,
+      "UserName": "NewUser",
+      "password": "NewUser"
+    },
+    {
+      "Id": 17,
+      "UserName": "Test134",
+      "password": "12345"
+    },
+    {
+      "Id": 18,
+      "UserName": "New User",
+      "password": "123456"
+    },
+    {
+      "Id": 19,
+      "UserName": "Adrian",
+      "password": "12345"
+    },
+    {
+      "Id": 20,
+      "UserName": "anushrigupta",
+      "password": "12345678"
+>>>>>>> Stashed changes
     }
   ],
   "Posts": [
@@ -14,6 +114,54 @@
       },
       "Title": "Testing",
       "Body": "Test1"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "Id": 2,
+      "Title": "helo",
+      "Body": "crazy"
+    },
+    {
+      "Id": 3,
+      "Title": "qwert",
+      "Body": "qwert"
+    },
+    {
+      "Id": 4,
+      "Title": "Testing New Post",
+      "Body": "My new post"
+    },
+    {
+      "Id": 5,
+      "Title": "New Post Number1",
+      "Body": "My first post"
+    },
+    {
+      "Id": 6,
+      "Title": "MyFirstPost",
+      "Body": "My first post today"
+    },
+    {
+      "Id": 7,
+      "Title": "Post Number1",
+      "Body": "Test post"
+    },
+    {
+      "Id": 8,
+      "Title": "DNP ",
+      "Body": "assginment"
+    },
+    {
+      "Id": 9,
+      "Title": "Adrian\u0027s first post",
+      "Body": "Hello hi bye bye"
+    },
+    {
+      "Id": 10,
+      "Title": "title",
+      "Body": "new post"
+>>>>>>> Stashed changes
     }
   ]
 }
